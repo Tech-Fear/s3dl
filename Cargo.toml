@@ -1,0 +1,32 @@
+[package]
+name = "s3dl"
+version = "0.1.0"
+edition = "2021"
+description = "S3 file downloader with multi-environment, multi-service credential management and automatic file type detection"
+license = "MIT"
+keywords = ["s3", "aws", "download", "cli"]
+categories = ["command-line-utilities"]
+
+[[bin]]
+name = "s3dl"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+tokio = { version = "1", features = ["full"] }
+aws-config = { version = "1", features = ["behavior-version-latest"] }
+aws-sdk-s3 = "1"
+aws-credential-types = "1"
+dirs = "6"
+anyhow = "1"
+indicatif = { version = "0.17", features = ["tokio"] }
+console = "0.15"
+dialoguer = "0.11"
+clap_complete = "4"
+
+[profile.release]
+strip = true
+lto = true
+opt-level = "z"
