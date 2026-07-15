@@ -20,22 +20,14 @@ S3 file downloader with multi-environment, multi-service credential management a
 The repository includes build scripts in the `dist/` directory that handle building the project for you, so you don't have to run Cargo commands manually.
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/s3dl.git
+git clone https://github.com/Tech-Fear/s3dl.git
 cd s3dl
 
-# Linux/macOS
+# Linux/macOS/Windows
 ./dist/build.sh
 ```
 
-The binary will be available at:
-
-```text
-./target/release/s3dl
-```
-
-> **Windows**
->
-> If a Windows build script is included, run the appropriate script from the `dist` directory instead.
+Everything will be completed automatically
 
 ### Install with Cargo
 
